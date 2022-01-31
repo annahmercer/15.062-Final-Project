@@ -68,7 +68,7 @@
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="#">BACKGROUND</a></li>
 				<li><a href="#">ABOUT THE DATA</a></li>
-				<li><a href="#">WINNERS TRENDS</a></li>
+				<li><a href="#">THE WINNER'S CIRCLE</a></li>
 			</ul>
 		</div>
 	</div>
@@ -96,9 +96,37 @@
 
 <!-- Third Container (Grid) -->
 <div class="container-fluid bg-3 text-center">
-	<h3 class="margin">WINNERS TRENDS</h3><br>
+	<h3 class="margin">THE WINNER'S CIRCLE</h3><br>
 	<div class="row">
-		<div id="winner_titles"></div>
+
+
+		<!-- carousel code from https://getbootstrap.com/docs/4.0/components/carousel/-->
+		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+			<ol class="carousel-indicators">
+				<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+			</ol>
+			<div class="carousel-inner">
+				<div class="item active">
+					<div id="top_winner_titles"></div>
+				</div>
+				<div class="item">
+					<div id="top_winner_locations"></div>
+				</div>
+				<div class="item">
+					<div id = "winner_genders"></div>
+				</div>
+			</div>
+			<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
 	</div>
 </div>
 
