@@ -1,3 +1,8 @@
 .chartVisuals{
     padding-bottom: 100px;
 }
+
+.carousel-indicators{
+    bottom: -50px;
+}
+
