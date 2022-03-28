@@ -11,4 +11,11 @@ d3.csv("data/15.062 Chopped Data.csv", (d)=> {return d}).then(
         winner_genders = new BarChart("winner_genders", data, "contestant4_gender", "Winner Gender Breakdown")
     });
 
+d3.csv("data/Seasons + Ingredients.csv", (d)=> {return d}).then(
+    function(data) {
+        season_ingredients = new BarChart2("seasonal_ingredients", data, "Ingredient Type", "Seasonal Ingredients")
+    });
 
+function updateAll(){
+    season_ingredients.wrangleData()
+}

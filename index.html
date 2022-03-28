@@ -140,8 +140,82 @@
 <div class="container-fluid bg-4 text-center" id="basket_trends">
 	<h3 class="margin" style="margin-bottom: 0px">Ingredient Trends</h3><br>
 	<div class="row">
-		<div class = "col-md-6">
+		<div class = "col-md-auto">
+			<div class = "row">
+			<select id="seasonSelector" style="color: black" onchange="updateAll()">
+				<option value="all" selected> All Seasons</option>
+				<option value="Winter"> Winter Ingredients</option>
+				<option value="Spring"> Spring Ingredients</option>
+				<option value="Summer"> Summer Ingredients</option>
+				<option value="Fall"> Fall Ingredients</option>
+			</select>
+			</div>
+			<div class="row" >
+				<div class="col-md-6" id="seasonal_ingredients" style="margin-top: 20px"></div>
+				<div class="col-md-6" style="margin-top: 200px">
+					<p> By viewing the bar charts to the left, we see that there is not a significant difference in the types of ingredients
+					that appear in the baskets during different seasons of the year.</p>
+				</div>
+			</div>
+			<div class="row" style="padding-left:30px; padding-right:30px">
+				<p> Through looking at the dataset, it appears that there is a relationship between the proximity of an episode's air date to a holiday and
+					the basket ingredients in an episode. For example, a number of episodes that were specified as Thanksgiving themed or that
+					aired around Thanksgiving included basket ingredients connected to Thanksgiving such as a whole turkey and pumpkin pie flavored ice cream.
+				</p>
+			</div>
+			<div class = "col-md-auto">
+				<div class = "row">
+					<select id="courseSelector" style="color: black" onchange="updateAll()">
+						<option value="all" selected> All Courses</option>
+						<option value="Appetizer"> Appetizer Ingredient Types</option>
+						<option value="Entree"> Entree Ingredient Types</option>
+						<option value="Dessert"> Dessert Ingredient Types</option>
+					</select>
+				</div>
 		</div>
+
+		<!--<div class = "col-md-6">-->
+			<!-- carousel code from https://getbootstrap.com/docs/4.0/components/carousel/-->
+			<!--<div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel">
+				<ol class="carousel-indicators">
+					<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active" style = "background-color:orange"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="1" style = "background-color: #555555" ></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="2" style = "background-color: #555555"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="3" style = "background-color: #555555"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="4" style = "background-color: #555555"></li>
+				</ol>
+				<div class="carousel-inner">
+					<div class="item active">
+						<div id="seasonal_ingredients"></div>
+					</div>
+					<div class="item">
+						<div id="holiday_ingredients"></div>
+					</div>
+					<div class="item">
+						<div id = "appetizer_ingredients"></div>
+					</div>
+					<div class="item">
+						<div id = "entree_ingredients"></div>
+					</div>
+					<div class="item">
+						<div id = "dessert_ingredients"></div>
+					</div>
+				</div>
+				<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
+			</div>
+		</div>
+		<div class="col-md-6" style = "margin-top:100px">
+			<p> ***FILL IN HERE***
+			</p>
+		</div>
+	</div>-->
 	</div>
 </div>
 
@@ -155,5 +229,7 @@
 
 <script src="js/main.js"></script>
 <script src="js/barchart.js"></script>
+<script src="js/barchart2.js"></script>
+
 </body>
 </html>
