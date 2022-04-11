@@ -10,12 +10,13 @@
 
 class BarChart2 {
 
-	constructor(parentElement, data, selection, title) {
+	constructor(parentElement, data, selection, selector,  title) {
 		this.parentElement = parentElement;
 		this.data = data;
 		this.selection = selection;
 		this.displayData = data;
 		this.title = title;
+		this.selector = selector;
 		//console.log(this.displayData);
 
 		this.initVis();
@@ -82,13 +83,13 @@ class BarChart2 {
 
 	wrangleData() {
 		let vis = this;
+		vis.selected = document.getElementById(vis.selector).value;
 
-		vis.seasonFilter = document.getElementById("seasonSelector").value;
 		// * TO-DO *
-		if (vis.seasonFilter == 'all'){
+		if (vis.selected == 'all'){
 			vis.displayData=vis.data
 		} else {
-			vis.displayData = vis.data.filter(x => x.Season == vis.seasonFilter)
+			vis.displayData = vis.data.filter(x => x['Interest Measure'] == vis.selected)
 		}
 		console.log(vis.displayData)
 		let dataByTitle = d3.rollup(vis.displayData, leaves => leaves.length, d => d[vis.selection])

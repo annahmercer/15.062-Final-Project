@@ -90,7 +90,7 @@ class BarChart {
 		vis.displayData.sort((a,b) =>b.value - a.value)
 		vis.filteredData = vis.displayData.slice(0,10)
 
-		console.log(vis.filteredData)
+		//console.log(vis.filteredData)
 		// Update the visualization
 		vis.updateVis();
 	}

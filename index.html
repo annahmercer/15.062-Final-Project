@@ -163,14 +163,22 @@
 					aired around Thanksgiving included basket ingredients connected to Thanksgiving such as a whole turkey and pumpkin pie flavored ice cream.
 				</p>
 			</div>
-			<div class = "col-md-auto">
+			<div class = "col-md-auto" style="padding-top: 15px">
 				<div class = "row">
 					<select id="courseSelector" style="color: black" onchange="updateAll()">
-						<option value="all" selected> All Courses</option>
-						<option value="Appetizer"> Appetizer Ingredient Types</option>
+						<option value="Appetizer" selected> Appetizer Ingredient Types</option>
 						<option value="Entree"> Entree Ingredient Types</option>
 						<option value="Dessert"> Dessert Ingredient Types</option>
 					</select>
+				</div>
+				<div class="row" >
+					<div class="col-md-6" id="course_ingredients" style="margin-top: 20px"></div>
+					<div class="col-md-6" style="margin-top: 200px">
+						<p> For appetizer and entree rounds, we observe that the three most common basket ingredients are
+							vegetables, prepared foods or meats. However, for desserts the three most common basket ingredients
+							are snack foods, fruits and condiments. This suggests that we may be able to predict basket ingredients
+							based on the course the basket is being created for. </p>
+					</div>
 				</div>
 		</div>
 
